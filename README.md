@@ -19,4 +19,4 @@ This project is part of the FreeCodeCamp Responsive Web Design Certification and
 Responsive Design: Media queries are used to ensure the survey form adapts to various screen sizes, providing a seamless experience on both desktop and mobile devices.
 Getting Started
 
-To view the survey form, simply open the index.html file in your preferred web browser
+To view the survey form, simply open the [index.html](https://fcc-surveyform-kat.netlify.app/) file in your preferred web browser
