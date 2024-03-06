@@ -36,4 +36,4 @@ To view the Cat Photo App project:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/yourusername/cat-photo-app.git
+   git clone https://github.com/KatlehoEM/cat-photo-app.git
