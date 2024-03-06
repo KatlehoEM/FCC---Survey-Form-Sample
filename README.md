@@ -1,22 +1,49 @@
-# Survey Form Project
+# freeCodeCamp Responsive Web Design Projects
 
-## Introduction
-This project is part of the FreeCodeCamp Responsive Web Design Certification and focuses on creating a responsive survey form. The goal is to design a form that is visually appealing and functional on various devices, providing users with a seamless experience.
+Welcome to my freeCodeCamp repository for the Responsive Web Design Certification! This repository contains a collection of projects completed as part of the freeCodeCamp curriculum to earn the Responsive Web Design Certification. The projects are mainly HTML and CSS based and demonstrate various web development skills.
 
-## Project Overview
+## About freeCodeCamp
 
-### Features
+[freeCodeCamp](https://www.freecodecamp.org/) is a nonprofit organization that offers free coding challenges and certifications. The Responsive Web Design Certification is one of the many certifications available on the platform and focuses on building websites using HTML and CSS.
 
-**Responsive Design**: The survey form is designed to be responsive, ensuring a consistent and user-friendly experience across different screen sizes and devices.
+## Projects
 
-**Form Elements**: The form includes various input elements such as text fields, radio buttons and checkboxes.
+### Exercise Projects
 
-### Technologies Used
+1. Cat Photo App - [View project](catphotoapp/index.html)
+2. Cafe Menu - [View project](cafemenu/index.html)
+3. Colored Markers - [View project](coloredmarkers/index.html)
+4. Registration Form - [View project](registrationform/index.html)
+5. Rothko Painting - [View project](rothkopainting/index.html)
+6. Photo Gallery - [View project](photogallery/index.html)
+7. Nutrition Label - [View project](nutritionlabel/index.html)
+8. Quiz - [View project](quiz/index.html)
+9. Balance Sheet - [View project](balancesheet/index.html)
+10. Cat Painting - [View project](catpainting/index.html)
+11. Piano - [View project](piano/index.html)
+12. City Skyline - [View project](cityskyline/index.html)
+13. Magazine - [View project](magazine/index.html)
 
-**HTML5**: The structure of the survey form is created using HTML5, incorporating semantic tags for improved accessibility and SEO.
+### Certification Projects
 
-**CSS3**: Styling is applied using CSS3, focusing on creating an attractive and responsive layout.
-Responsive Design: Media queries are used to ensure the survey form adapts to various screen sizes, providing a seamless experience on both desktop and mobile devices.
-Getting Started
+1. Build a Survey Form - [View project](survey-form/index.html)
+2. Build a Tribute Page - [View project](tribute-page/index.html)
+3. Build a Technical Documentation Page - [View project](technical-documentation-page/index.html)
+4. Build a Product Landing Page - [View project](product-landing-page/index.html)
+5. Build a Personal Portfolio Webpage - [View project](personal-portfolio/index.html)
 
-To view the survey form, simply open the [index.html](https://fcc-surveyform-kat.netlify.app/) file in your preferred web browser
+Feel free to explore each project to see my implementation and understanding of responsive web design principles.
+
+## Getting Started
+
+To view a specific project:
+
+1. Navigate to the project folder.
+2. Open the `index.html` file in your preferred web browser.
+
+## Contribution
+
+While contributions to the projects themselves are not accepted, feedback and suggestions are always welcome! If you have any ideas for improvement or questions about any project, feel free to [contact me](mailto:katlehomak6@gmail.com).
+
+Thank you for visiting my freeCodeCamp Responsive Web Design Projects repository! Happy coding!
+
