@@ -23,6 +23,8 @@ Welcome to my freeCodeCamp repository for the Responsive Web Design Certificatio
 11. Piano - [View project](piano/index.html)
 12. City Skyline - [View project](cityskyline/index.html)
 13. Magazine - [View project](magazine/index.html)
+14. Ferris Wheel - [View project](ferrieswheel/index.html)
+15. Penguin - [View project](penguin/index.html)
 
 ### Certification Projects
 
