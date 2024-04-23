@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale="1.0">
+    <title>Technical Doc Page</title> 
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <nav id="navbar">
+        <header>React JS Documentation</header>
+        <a href="#Hello_World" class="nav-link">Hello World</a>
+        <a href="#Introducing_JSX" class="nav-link">Introducing JSX</a>
+        <a href="#Rendering_Elements" class="nav-link">Rendering Elements</a>
+        <a href="#Components_and_Props" class="nav-link">Components and Props</a>
+        <a href="#State_and_Lifecycle" class="nav-link">State and Lifecycle</a>
+      </nav>
+    <main id="main-doc">
+        <header class="hidden">React JS Documentation</header>
+      <section class="main-section" id="Hello_World">
+        <header>Hello World</header>
+        <p>The smallest React example looks like this:</p>
+        <pre>
+            <code>
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(&lt;h1>Hello, world!&lt;/h1>);
+            </code>
+        </pre>
+        <p>It displays a heading saying "Hello World!" on the page.</p>
+        <h4><a class="external-link" href="https://codepen.io/gaearon/pen/rrpgNB?editors=1010">Try it on CodePen</a></h4>
+        <p>Click the link above to open an online editor. Feel free to maek some changes and see how they affect the output.
+             Most pages in this guide will have editable exaples like this one.
+        </p>
+        <hr>
+        <h3>How to Read This Guide</h3>
+        <p>In this guide, we will examine the building blocks of React apps: elements and compontents. Once
+             you master them, you can create complex apps from small reusable pieces.
+        </p>
+
+        <div class="tip">
+            <p class="heading">Tip</p>
+            <p>
+                This guide is designed for people who prefer <span class="bold">learning concepts step by step</span>
+                If you prefer to learn by doing, check out our <a class="external-link" href="https://legacy.reactjs.org/tutorial/tutorial.html">practical tutorial</a>. You might find this guide and the tutorial complementary to each other.
+            </p>
+        </div>
+        <p>
+            This is the first chapter in a step by step guide about main React concepts. You can find a list of all its chapters in the navigation sidebar.
+            If you're reading this from a mobile device, you can access the navigation by pressing the button in th e bottom right corner of your screen.
+        </p>
+        <p>
+            Every chapter in this guide builds on the knowledge introduced in earlier chapters.
+            <span class="bold">You can learn most of React by reading the 
+                "Main Concepts" guide chapters in the order they appear in the sidebar
+            </span>
+            For example,<a class="external-link" href="https://legacy.reactjs.org/docs/introducing-jsx.html">"Introducing JSX"</a>
+            in the next chapter after this one.
+        </p>
+        <hr>
+        <h3>Knowledge Level Assumptions</h3>
+        <p>
+            React is a JavaScript library, and so we’ll assume you have a basic understanding of the JavaScript language.
+            <span class="bold">If you don’t feel very confident, we recommend <a class="external-link" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript">going through a JavaScript tutorial</a> to check your knowledge level</span> and enable you to follow along this guide without getting lost. 
+            It might take you between 30 minutes and an hour, but as a result you won’t have to feel like you’re learning both React and JavaScript at the same time.
+        </p>
+        <div class="tip">
+            <p class="heading">Note</p>
+            <p>
+                This guide occasionally uses some newer JavaScript syntax in the 
+                examples. If you haven’t worked with JavaScript in the last few years, 
+                <a class="external-link" href="https://gist.github.com/gaearon/683e676101005de0add59e8bb345340c">these three points</a> should get you most of the way. </p>
+        </div>
+
+        <hr>
+        <h3>Let’s Get Started!</h3>
+        <p>
+            Keep scrolling down, and you’ll find the link 
+            to the <a class="external-link" href="#">next chapter of this guide</a> right before the website footer. </p>
+
+            <ol>
+                <li>We call <code>root.render()</code> with the <code>&lt;Welcome name="Sara" /></code> element.</li>
+                <li>React calls the <code>Welcome</code> component with <code>{name: 'Sara'} </code>as the props</li>
+                <li>Our <code>Welcome</code> component returns a <code>&lt;h1>Hello, Sara&lt;/h1> </code>element as the result.</li>
+                <li>React DOM efficiently updates the DOM to match <code>&lt;h1>Hello, Sara&lt;/h1></code>.</li>
+            </ol>
+      </section>
+
+      <section class="main-section" id="Introducing_JSX">
+        <header>Introducing JSX</header>
+        <p>Consider this variable declaration:</p>
+        <pre>
+            <code>
+    const element = &lt;h1>Hello, world!&lt;/h1>;
+            </code>
+        </pre>
+        <p>This funny tag syntax is neither a string nor HTML</p>
+        <p>It is called JSX, and it is a syntax extension to Javascript. We recommend using it with React to describe what the UI should look like.
+            JSX may remind you of a template language, but it comes with the full power of Javascript.
+        </p>
+
+        <p>
+            JSX produces React "elements". We will explore rendering them to the DOM in the <a class="external-link" href="https://legacy.reactjs.org/docs/rendering-elements.html">next section</a>
+            Below, you can find the basics of JSX necessary to get you started.
+        </p>
+
+        <h3>Why JSX</h3>
+        <p>
+            React embraces the fact that rendering logic is inherently coupled with other UI logic: 
+            how events are handled, how the state changes over time, and how the data is prepared for display.
+        </p>
+
+        <p>
+            Instead of artificially separating technologies by putting markup and logic in separate files, React <a class="external-link" href="https://en.wikipedia.org/wiki/Separation_of_concerns">separates concerns</a> with loosely coupled units called “components” that contain both.
+             We will come back to components in a <a class="external-link" href="https://legacy.reactjs.org/docs/components-and-props.html">further section</a>, 
+             but if you’re not yet comfortable putting markup in JS, 
+             <a class="external-link" href="https://www.youtube.com/watch?v=x7cQ3mrcKaY">this talk</a> might convince you otherwise.
+        </p>
+           React <a class="external-link" href="https://legacy.reactjs.org/docs/react-without-jsx.html">doesn’t require</a> using JSX, but most people find it
+           helpful as a visual aid when working with UI inside the JavaScript code.
+           It also allows React to show more useful error and warning messages.
+        <p>
+            With that out of the way, let's get started!
+        </p>
+        <hr>
+
+        <h3>Embedding Expressions in JSX</h3>
+
+        <p>In the example below, we declare a variable called 
+            name and then use it inside JSX by wrapping it in curly braces:
+        </p>
+
+        <pre>
+            <code>
+    const name = 'Josh Perez';
+    const element = &lt;h1>Hello, {name}&lt;/h1>;
+            </code>
+        </pre>
+    
+        <p>
+            You can put any valid <a class="external-link" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions">JavaScript expression</a>  inside the curly 
+            braces in JSX. For example, <code>2 + 2, user.firstName, or formatName(user)</code> are all valid JavaScript expressions.
+        </p>
+
+        <p>
+            In the example below, we embed the result of calling a 
+            JavaScript function, <code>formatName(user), into an &lt;h1> element</code>.
+        </p>
+
+        <pre>
+            <code>
+    function formatName(user) {
+        return user.firstName + ' ' + user.lastName;
+        }
+        
+        const user = {
+        firstName: 'Harper',
+        lastName: 'Perez'
+        };
+        
+        const element = (
+        &lt;h1>
+            Hello, {formatName(user)}!
+        &lt;/h1>
+        );
+</code>
+        </pre>
+
+        <h4><a class="external-link" href="https://codepen.io/gaearon/pen/PGEjdG?editors=1010">Try it on CodePen</a></h4>
+
+        <p>
+            We split JSX over multiple lines for readability. 
+            While it isn’t required, when doing this, we also 
+            recommend wrapping it in parentheses to avoid the 
+            pitfalls of <a class="external-link" href="https://stackoverflow.com/q/2846283">automatic semicolon insertion</a>.
+        </p>
+        <hr>
+        <h3>
+            JSX is an Expression Too
+        </h3>
+        <p>
+            After compilation, JSX expressions become regular JavaScript function calls and evaluate to JavaScript objects.
+            This means that you can use JSX inside of if statements and for loops, assign it to variables, accept it as arguments, and return it from functions:
+        </p>
+
+        <pre>
+            <code>
+    function getGreeting(user) {
+        if (user) {
+            return &lt;h1>Hello, {formatName(user)}!&lt;/h1>;
+        }
+        return &lt;h1>Hello, Stranger.&lt;/h1>;
+        }
+            </code>
+        </pre>
+
+        <ol>
+            <li>We call <code>root.render()</code> with the <code>&lt;Welcome name="Sara" /></code> element.</li>
+            <li>React calls the <code>Welcome</code> component with <code>{name: 'Sara'} </code>as the props</li>
+            <li>Our <code>Welcome</code> component returns a <code>&lt;h1>Hello, Sara&lt;/h1> </code>element as the result.</li>
+            <li>React DOM efficiently updates the DOM to match <code>&lt;h1>Hello, Sara&lt;/h1></code>.</li>
+        </ol>
+
+     
+      </section>
+
+      <section class="main-section" id="Rendering_Elements">
+        <header>Rendering Elements</header>
+        <p>Elements are smallest building blocks of React apps</p>
+        <p>An element describes what you want to see on the screen:</p>
+
+        <pre>
+            <code>
+    const element = &lt;h1>Hellow, world&lt;/h1>;
+            </code>
+        </pre>
+
+        <p>Unlike browser DOM elements, React elements are plain objects, and are cheap to create.
+             React DOM takes care of updating the DOM to match the React elements.</p>
+
+        <div class="tip">
+            <p class="heading">Note</p>
+            <p>
+                One might confuse elements with a more widely 
+                known concept of “components”. We will introduce 
+                components in the next section. Elements are what components are
+                 “made of”, and we encourage you to read this section before 
+                 jumping ahead. 
+            </p>
+        </div>
+
+        <hr>
+
+        <h3>Rendering an Element into the DOM</h3>
+
+        <p>Let’s say there is a &lt;div> somewhere in your HTML file:</p>
+
+        <pre>
+            <code>
+    &lt;div id="root">&lt;/div>
+            </code>
+        </pre>
+
+        <p>
+            We call this a “root” DOM node 
+            because everything inside it will be managed by React DOM.
+        </p>
+
+        <p>
+            Applications built with just React usually have a 
+            single root DOM node. If you are integrating React into an existing app,
+             you may have as many isolated root DOM nodes as you like.
+        </p>
+
+        <p>
+            To render a React element, first pass the DOM element to <code>ReactDOM.createRoot()</code>,
+             then pass the React element to <code>root.render()</code>:
+        </p>
+      
+        <pre>
+            <code>
+    const root = ReactDOM.createRoot(
+        document.getElementById('root')
+    );
+    const element = &lt;h1>Hello, world&lt;/h1>;
+    root.render(element);
+            </code>
+        </pre>
+
+        <p>It displays "Hello, world" on the page.</p>
+        <h4><a class="external-link" href="https://codepen.io/gaearon/pen/ZpvBNJ?editors=1010">Try it on CodePen</a></h4>
+
+        
+        <hr>
+        <h3>Updating the Rendered Element</h3>
+
+        <p>
+            React elements are immutable. Once you create an element, 
+            you can’t change its children or attributes. An element is like a single frame in a movie:
+             it represents the UI at a certain point in time.
+        </p>
+
+
+        <p>
+            With our knowledge so far, the only way to update
+             the UI is to create a new element, and pass it to <code>root.render()</code>.
+
+        </p>
+
+        <p>
+            Consider this ticking clock example:
+        </p>
+
+        <pre>
+            <code>
+    const root = ReactDOM.createRoot(
+        document.getElementById('root')
+    );
+
+    function tick() {
+        const element = (
+            &lt;div>
+                &lt;h1>Hello, world!&lt;/h1>
+                &lt;h2>It is {new Date().toLocaleTimeString()}.&lt;/h2>
+            </div>
+        );
+        root.render(element);
+    }
+
+    setInterval(tick, 1000);
+            </code>
+        </pre>
+
+        
+        <h4><a class="external-link" href="https://codepen.io/gaearon/pen/gwoJZk?editors=1010">Try it on CodePen</a></h4>
+
+        <p>
+            It calls <code></code>root.render()</code> every second from a <code>setInterval()</code> callback.
+        </p>
+
+        <div class="tip">
+            <p class="heading">Note:</p>
+            <p>
+                In practice, most React apps only call root.render() once. In the next sections we will learn how such code gets encapsulated into stateful components.
+            </p>
+            <p>
+                We recommend that you don’t skip topics because they build on each other.
+            </p>
+        </div>
+        <ol>
+            <li>We call <code>root.render()</code> with the <code>&lt;Welcome name="Sara" /></code> element.</li>
+            <li>React calls the <code>Welcome</code> component with <code>{name: 'Sara'} </code>as the props</li>
+            <li>Our <code>Welcome</code> component returns a <code>&lt;h1>Hello, Sara&lt;/h1> </code>element as the result.</li>
+            <li>React DOM efficiently updates the DOM to match <code>&lt;h1>Hello, Sara&lt;/h1></code>.</li>
+        </ol>
+      
+      </section>
+
+      <section class="main-section" id="Components_and_Props">
+        <header>Components and Props</header>
+
+        <p>
+            Components let you split the UI into independent, 
+            reusable pieces, and think about each piece in isolation. 
+            This page provides an introduction to the idea of components. 
+            You can find a detailed component API reference here.
+        </p>
+        <p>
+            Conceptually, components are like JavaScript functions. 
+            They accept arbitrary inputs (called “props”) and return React
+             elements describing what should appear on the screen.
+        </p>
+
+        <h3>Function and Class Components</h3>
+
+        <p>The simplest way to define a component is to write a JavaScript function:</p>
+
+        <pre>
+            <code>
+    function Welcome(props) {
+        return &lt;h1>Hello, {props.name}&lt;/h1>;
+        }
+            </code>
+        </pre>
+
+        <p>
+            This function is a valid React component because it accepts 
+            a single “props” (which stands for properties) object argument 
+            with data and returns a React element. We call such components “function components” 
+            because they are literally JavaScript functions.
+        </p>
+
+        <p>
+            You can also use an ES6 class to define a component:
+        </p>
+
+        <pre>
+            <code>
+    class Welcome extends React.Component {
+        render() {
+            return &lt;h1>Hello, {this.props.name}&lt;/h1>;
+        }
+        }
+            </code>
+        </pre>
+
+        <p>
+            The above two components are equivalent from React’s point of view.
+        </p>
+        
+        <p>
+            Function and Class components both have some additional features that we will discuss in the next sections.
+        </p>
+
+        <pre>
+            <code>
+    const element = &lt;div />;
+            </code>
+        </pre>
+        
+        <p>
+            However, elements can also represent user-defined components:
+        </p>
+
+        <pre>
+            <code>
+    const element = &lt;Welcome name="Sara" />;
+            </code>
+        </pre>
+
+        <p>
+            When React sees an element representing a user-defined component,
+             it passes JSX attributes and children to this component as a single object. We call this object “props”.
+        </p>
+
+        <p>
+            For example, this code renders “Hello, Sara” on the page:
+        </p>
+
+        <pre>
+            <code>
+    function Welcome(props) {
+        return &lt;h1>Hello, {props.name}&lt;/h1>;
+        }
+        
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        const element = &lt;Welcome name="Sara" />;
+        root.render(element);
+            </code>
+        </pre>
+
+           
+        <h4><a class="external-link" href="https://codepen.io/gaearon/pen/YGYmEG?editors=1010">Try it on CodePen</a></h4>
+
+        <p>Let’s recap what happens in this example:</p>
+
+        <ol>
+            <li>We call <code>root.render()</code> with the <code>&lt;Welcome name="Sara" /></code> element.</li>
+            <li>React calls the <code>Welcome</code> component with <code>{name: 'Sara'} </code>as the props</li>
+            <li>Our <code>Welcome</code> component returns a <code>&lt;h1>Hello, Sara&lt;/h1> </code>element as the result.</li>
+            <li>React DOM efficiently updates the DOM to match <code>&lt;h1>Hello, Sara&lt;/h1></code>.</li>
+        </ol>
+
+        <div class="tip">
+            <p class="heading">Note:</p>
+            <p>React treats components starting with lowercase letters as DOM tags. For example, <code>&lt;div /></code> represents an HTML div tag, but <code><Welcome /></code> represents a component and requires <code>Welcome</code> to be in scope.</p>
+        </div>
+      </section>
+
+      <section class="main-section" id="State_and_Lifecycle">
+        <header>State and Lifecycle</header>
+        <p>
+            This page introduces the concept of state and lifecycle in a 
+            React component. 
+            You can find a detailed component API reference here.
+        </p>
+
+        <p>
+            Consider the ticking clock example from one of the previous sections. 
+            In Rendering Elements, we have only learned one way to update the UI. 
+            We call <code>root.render()</code> to change the rendered output:
+        </p>
+
+        <pre>
+            <code>
+    const root = 
+    ReactDOM.createRoot(document.getElementById('root'));
+    function tick() {
+        const element = (
+            &lt;div>
+            &lt;h1>Hello, world!&lt;/h1>
+            &lt;h2>It is {new Date().toLocaleTimeString()}.&lt;/h2>
+            &lt;/div>
+        );
+        root.render(element);
+    }
+
+    setInterval(tick, 1000);
+            </code>
+        </pre>
+           
+        <h4><a class="external-link" href="https://codepen.io/gaearon/pen/gwoJZk?editors=0010">Try it on CodePen</a></h4>
+
+        <p>
+            In this section, we will learn how to make the Clock component
+             truly reusable and encapsulated.
+             It will set up its own timer and update itself every second.
+        </p>
+        <p>
+            We can start by encapsulating how the clock looks:
+        </p>
+
+        <pre>
+            <code>
+    const root = 
+    ReactDOM.createRoot(document.getElementById('root'));
+
+    function Clock(props) {
+        return (
+            &lt;div>
+                &lt;h1>Hello, world!&lt;/h1>
+                &lt;h2>It is {props.date.toLocaleTimeString()}.&lt;/h2>
+            &lt;/div>
+        );
+    }
+
+    function tick() {
+        root.render(&lt;Clock date={new Date()} />);
+    }
+
+    setInterval(tick, 1000);
+            </code>
+        </pre>
+
+                
+        <p>
+            Ideally we want to write this once and have the Clock update itself:
+        </p>
+        <pre>
+            <code>
+    root.render(<Clock />);
+            </code>
+        </pre>
+
+        <p>Note how we pass props to the base constructor:</p>
+
+        <pre>
+            <code>
+    constructor(props) {
+        super(props);
+        this.state = {date: new Date()};
+        }
+            </code>
+        </pre>
+
+        <p>We will tear down the timer in the <code>componentWillUnmount()</code> lifecycle method:</p>
+
+        <pre>
+            <code>
+    componentWillUnmount() {
+        clearInterval(this.timerID);
+        }
+            </code>
+        </pre>
+
+        <ol>
+            <li>We call <code>root.render()</code> with the <code>&lt;Welcome name="Sara" /></code> element.</li>
+            <li>React calls the <code>Welcome</code> component with <code>{name: 'Sara'} </code>as the props</li>
+            <li>Our <code>Welcome</code> component returns a <code>&lt;h1>Hello, Sara&lt;/h1> </code>element as the result.</li>
+            <li>React DOM efficiently updates the DOM to match <code>&lt;h1>Hello, Sara&lt;/h1></code>.</li>
+        </ol>
+
+
+      </section>
+    </main>
+  </body>
+</html>
