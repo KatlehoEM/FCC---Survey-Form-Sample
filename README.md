@@ -28,11 +28,11 @@ Welcome to my freeCodeCamp repository for the Responsive Web Design Certificatio
 
 ### Certification Projects
 
-1. Build a Survey Form - [View project](survey-form/index.html)
-2. Build a Tribute Page - [View project](tribute-page/index.html)
-3. Build a Technical Documentation Page - [View project](technical-documentation-page/index.html)
-4. Build a Product Landing Page - [View project](product-landing-page/index.html)
-5. Build a Personal Portfolio Webpage - [View project](personal-portfolio/index.html)
+1. Build a Survey Form - [View project](surveyform/index.html)
+2. Build a Tribute Page - [View project](tributepage/index.html)
+3. Build a Technical Documentation Page - [View project](technicaldocumentationpage/index.html)
+4. Build a Product Landing Page - [View project](productlanding-page/index.html)
+5. Build a Personal Portfolio Webpage - [View project](personalportfolio/index.html)
 
 Feel free to explore each project to see my implementation and understanding of responsive web design principles.
 
