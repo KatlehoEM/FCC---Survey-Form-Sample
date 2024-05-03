@@ -1,0 +1,62 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Helvetica,sans-serif,Arial;
+    font-size: large;
+    background-color: white;
+    margin:30px 10px;
+    color:#333;
+}
+
+main{
+    background-color: #eeeded;
+    border-radius: 5px;
+   padding-bottom:40px;
+}
+h1,p{
+    text-align: center;
+    padding-top:50px;
+}
+p{
+    padding-bottom: 30px;
+}
+#img-div{
+    background-color: white;
+    margin:15px;
+    padding:15px;
+    text-align: center;
+    line-height: 1.5rem;
+}
+#image{
+    width:70%;
+    max-width: 100%;
+    max-height: 650px;
+}
+#tribute-info{
+    width:75%;
+    margin:10px auto;
+}
+
+h4{
+    text-align: center;
+}
+
+#tribute-info li{
+    padding: 15px 0;
+}
+
+a{
+    color:rgb(47, 132, 230);
+}
+a:hover{
+    color:rgb(7, 27, 95);
+}
+
+img{
+    display: block;
+    margin: 5px auto;
+}
